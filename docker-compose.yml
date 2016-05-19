@@ -1,0 +1,53 @@
+version: "2"
+services:
+  spark_master:
+    image: xkd0413/docker-spark:latest
+    expose: 
+      - 7077
+      - 8888
+      - 8081
+      - 4040
+      - 7001
+      - 7002
+      - 7003
+      - 7004
+      - 7005
+      - 7006
+    entrypoint: sh -c "/start-master.sh && /bin/bash"
+    environment:
+      - JAVA_HOME=/usr/lib/jvm/java-7-oracle/
+    networks: 
+    - spark-network
+
+  spark_slave1:
+    extends: spark_master
+    environment:
+      - JAVA_HOME=/usr/lib/jvm/java-7-oracle/
+      - SPARK_MASTER_PORT_7077_TCP_ADDR=spark_master
+      - SPARK_MASTER_ENV_SPARK_MASTER_PORT=7077
+    # entrypoint: sh -c "/start-worker.sh --memory 700M && ail -f /dev/null"
+    entrypoint: /bin/bash
+    networks: 
+    - spark-network
+    depends_on: 
+    - spark_master
+
+  spark_slave2:
+    extends: spark_master
+    environment:
+      - JAVA_HOME=/usr/lib/jvm/java-7-oracle/
+      - SPARK_MASTER_PORT_7077_TCP_ADDR=spark_master
+      - SPARK_MASTER_ENV_SPARK_MASTER_PORT=7077
+    entrypoint: sh -c "/start-worker.sh --memory 700M && ail -f /dev/null"
+    networks: 
+    - spark-network
+    depends_on: 
+    - spark_master
+
+networks:
+  spark-network:
+    driver: overlay
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.0.10.0/24
