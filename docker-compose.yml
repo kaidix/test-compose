@@ -1,48 +1,98 @@
 version: "2"
 services:
-  spark_master:
-    image: xkd0413/docker-spark:latest
-    expose: 
-      - 7077
-      - 8888
-      - 8081
-      - 4040
-      - 7001
-      - 7002
-      - 7003
-      - 7004
-      - 7005
-      - 7006
-    entrypoint: sh -c "/start-master.sh && /bin/bash"
-    environment:
-      - JAVA_HOME=/usr/lib/jvm/java-7-oracle/
+  zk:
+    image: netflixoss/exhibitor:1.5.2
     networks: 
     - spark-network
+  mesos_master:
+    image: mesosphere/mesos-master:0.28.0-2.0.16.ubuntu1404
+    environment:
+      - MESOS_PORT=5050
+      - MESOS_ZK=zk://zk:2181/mesos
+      - MESOS_QUORUM=1
+      - MESOS_REGISTRY=in_memory
+      - MESOS_LOG_DIR=/var/log/mesos
+      - MESOS_WORK_DIR=/var/tmp/mesos
+    depends_on:
+      - zk
+    ports:
+      - "5050:5050"
+    networks: 
+      - spark-network
 
-  spark_slave1:
-    extends: spark_master
+  mesos_slave:
+    image: xkd0413/mesos_slave
+    privileged: true
+    cpu_shares: 1
+    mem_limit: 900000000
     environment:
-      - JAVA_HOME=/usr/lib/jvm/java-7-oracle/
-      - SPARK_MASTER_PORT_7077_TCP_ADDR=spark_master
-      - SPARK_MASTER_ENV_SPARK_MASTER_PORT=7077
-    # entrypoint: sh -c "/start-worker.sh --memory 700M && ail -f /dev/null"
-    entrypoint: /bin/bash
-    networks: 
-    - spark-network
+      - MESOS_PORT=5051
+      - MESOS_MASTER=zk://zk:2181/mesos
+      - MESOS_SWITCH_USER=0
+      - MESOS_CONTAINERIZERS=docker,mesos
+      - MESOS_LOG_DIR=/var/log/mesos
+      - MESOS_WORK_DIR=/var/tmp/mesos
+    volumes:
+      - /usr/local/bin/docker:/usr/local/bin/docker
     depends_on: 
-    - spark_master
+      - mesos_master
+    networks: 
+      - spark-network
+    entrypoint: ["mesos-slave", "--launcher=posix", '--resources=cpus(*):8; mem(*):15360;']
 
-  spark_slave2:
-    extends: spark_master
-    environment:
-      - JAVA_HOME=/usr/lib/jvm/java-7-oracle/
-      - SPARK_MASTER_PORT_7077_TCP_ADDR=spark_master
-      - SPARK_MASTER_ENV_SPARK_MASTER_PORT=7077
-    entrypoint: sh -c "/start-worker.sh --memory 700M && ail -f /dev/null"
-    networks: 
-    - spark-network
-    depends_on: 
-    - spark_master
+  # spark_master:
+  #   image: xkd0413/docker-spark:latest
+  #   expose: 
+  #     - 7077
+  #     - 8888
+  #     - 8081
+  #     - 4040
+  #     - 7001
+  #     - 7002
+  #     - 7003
+  #     - 7004
+  #     - 7005
+  #     - 7006
+  #   entrypoint: sh -c "/start-master.sh && /bin/bash"
+  #   environment:
+  #     - JAVA_HOME=/usr/lib/jvm/java-7-oracle/
+  #   networks: 
+  #   - spark-network
+
+  # spark_slave1:
+  #   image: xkd0413/docker-spark:latest
+  #   expose: 
+  #     - 7077
+  #     - 8888
+  #     - 8081
+  #     - 4040
+  #     - 7001
+  #     - 7002
+  #     - 7003
+  #     - 7004
+  #     - 7005
+  #     - 7006
+  #   # entrypoint: sh -c "/start-master.sh && /bin/bash"
+  #   environment:
+  #     - JAVA_HOME=/usr/lib/jvm/java-7-oracle/
+  #     - SPARK_MASTER_PORT_7077_TCP_ADDR=spark_master
+  #     - SPARK_MASTER_ENV_SPARK_MASTER_PORT=7077
+  #   # entrypoint: sh -c "/start-worker.sh --memory 700M && ail -f /dev/null"
+  #   entrypoint: /bin/bash
+  #   networks: 
+  #   - spark-network
+
+  # spark_slave2:
+  #   extends: spark_master
+  #   environment:
+  #     - JAVA_HOME=/usr/lib/jvm/java-7-oracle/
+  #     - SPARK_MASTER_PORT_7077_TCP_ADDR=spark_master
+  #     - SPARK_MASTER_ENV_SPARK_MASTER_PORT=7077
+  #   entrypoint: sh -c "/start-worker.sh --memory 700M && ail -f /dev/null"
+  #   networks: 
+  #   - spark-network
+  #   depends_on: 
+  #   - spark_master
 
 networks:
   spark-network:
