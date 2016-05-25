@@ -40,59 +40,23 @@ services:
       - spark-network
     entrypoint: ["mesos-slave", "--launcher=posix", '--resources=cpus(*):8; mem(*):15360;']
 
-  # spark_master:
-  #   image: xkd0413/docker-spark:latest
-  #   expose: 
-  #     - 7077
-  #     - 8888
-  #     - 8081
-  #     - 4040
-  #     - 7001
-  #     - 7002
-  #     - 7003
-  #     - 7004
-  #     - 7005
-  #     - 7006
-  #   entrypoint: sh -c "/start-master.sh && /bin/bash"
-  #   environment:
-  #     - JAVA_HOME=/usr/lib/jvm/java-7-oracle/
-  #   networks: 
-  #   - spark-network
-
-  # spark_slave1:
-  #   image: xkd0413/docker-spark:latest
-  #   expose: 
-  #     - 7077
-  #     - 8888
-  #     - 8081
-  #     - 4040
-  #     - 7001
-  #     - 7002
-  #     - 7003
-  #     - 7004
-  #     - 7005
-  #     - 7006
-  #   # entrypoint: sh -c "/start-master.sh && /bin/bash"
-  #   environment:
-  #     - JAVA_HOME=/usr/lib/jvm/java-7-oracle/
-  #     - SPARK_MASTER_PORT_7077_TCP_ADDR=spark_master
-  #     - SPARK_MASTER_ENV_SPARK_MASTER_PORT=7077
-  #   # entrypoint: sh -c "/start-worker.sh --memory 700M && ail -f /dev/null"
-  #   entrypoint: /bin/bash
-  #   networks: 
-  #   - spark-network
-
-  # spark_slave2:
-  #   extends: spark_master
-  #   environment:
-  #     - JAVA_HOME=/usr/lib/jvm/java-7-oracle/
-  #     - SPARK_MASTER_PORT_7077_TCP_ADDR=spark_master
-  #     - SPARK_MASTER_ENV_SPARK_MASTER_PORT=7077
-  #   entrypoint: sh -c "/start-worker.sh --memory 700M && ail -f /dev/null"
-  #   networks: 
-  #   - spark-network
-  #   depends_on: 
-  #   - spark_master
+  kafka_master:
+    image: wurstmeister/kafka
+    ports:
+      - "9092:9092"
+    depends_on:
+      - zk
+    environment:
+      KAFKA_ADVERTISED_HOST_NAME: kafka_master
+      KAFKA_CREATE_TOPICS: "FIRST_TOPIC:1:1"
+      KAFKA_ZOOKEEPER_CONNECT: zk:2181
+    networks: 
+      - spark-network
+    depends_on:
+      - zk
+    volumes:
+      - ./config:/config
+    entrypoint: ["/opt/kafka_2.11-0.9.0.1/bin/kafka-server-start.sh", "/config/server.properties"]
 
 networks:
   spark-network:

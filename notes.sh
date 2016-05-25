@@ -17,3 +17,7 @@ docker-compose up -d
 ## docker-compose up -d
 
 docker exec -it mhs-demo0/sparkkafkadockerdemo2_mesos_slave_1 /usr/local/spark/bin/spark-shell --master mesos://mesos_master:5050
+
+docker exec -it mhs-demo0/sparkkafkadockerdemo2_kafka_master_1 /opt/kafka_2.11-0.9.0.1/bin/kafka-topics.sh --create --zookeeper zk:2181 --replication-factor 1 --partitions 1 --topic test
+
+docker exec -it mhs-demo0/sparkkafkadockerdemo2_kafka_master_1 /opt/kafka_2.11-0.9.0.1/bin/kafka-topics.sh --list --zookeeper zk:2181
