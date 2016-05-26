@@ -34,6 +34,8 @@ services:
       - MESOS_WORK_DIR=/var/tmp/mesos
     volumes:
       - /usr/local/bin/docker:/usr/local/bin/docker
+      - ./pysparkFile:/pysparkFile
+      - ./decisiontree:/decisiontree
     depends_on: 
       - mesos_master
     networks: 
