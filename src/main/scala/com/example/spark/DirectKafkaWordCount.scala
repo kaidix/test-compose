@@ -4,10 +4,12 @@ import kafka.serializer.StringDecoder
 import org.apache.spark.{TaskContext, SparkConf}
 import org.apache.spark.streaming.kafka.{OffsetRange, HasOffsetRanges, KafkaUtils}
 import org.apache.spark.streaming.{Seconds, StreamingContext}
+import org.apache.spark.mllib.linalg.Vectors
 
 import org.apache.spark.mllib.tree.DecisionTree
 import org.apache.spark.mllib.tree.model.DecisionTreeModel
 import org.apache.spark.mllib.util.MLUtils
+import org.apache.spark.mllib.regression.LabeledPoint
 
 object DirectKafkaWordCount {
   def main(args: Array[String]): Unit = {
@@ -34,17 +36,37 @@ object DirectKafkaWordCount {
       ssc, kafkaParams, topicsSet)
 
     // Get the lines, split them into words, count the words and print
-    val lines = messages.map(_._2)
-    val words = lines.flatMap(_.split(" "))
+    val lines = messages.map { line =>
+      val parts = line._2.split(' ')
+      parts
+    }
 
     val model = DecisionTreeModel.load(ssc.sparkContext, "/decisiontree")
-    val prediction = model.predict(words.map(lambda x: x.features))
+    val labelAndPreds = lines.map { point =>
+      val prediction = model.predict(LabeledPoint(0.0, Vectors.dense(point.slice(1,2).map(x => x.toDouble))).features)
+      (point(0), prediction)
+    }
+    labelAndPreds.map {point => 
+        if(point._2>0){
+            print("Captured abnormal heartbeat rate:" + point._2 + "Device: " + point._1)
+        }
+        else{
+            print("Normal data:")
+            print(point)
+        }
+        point
+    }
+    labelAndPreds.print()
+    // val prediction = model.predict(words.map(lambda x: x.features))
 
-    val wordCounts = words.map(x => (x, 1L)).reduceByKey(_ + _)
-    wordCounts.print()
+    // val wordCounts = words.map(x => (x, 1L)).reduceByKey(_ + _)
+    // wordCounts.print()
 
     // Start the computation
     ssc.start()
     ssc.awaitTermination()
+  }
+  def parseInput(line:String){
+      val parts = line.split(' ')
   }
 }

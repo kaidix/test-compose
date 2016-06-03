@@ -1,0 +1,213 @@
+format version: 5
+output mode:
+1 items
+0 -> single
+output directories:
+1 items
+output dir -> /Users/kaidi.xu/workspace/hack/test-compose/target/scala-2.10/classes
+compile options:
+0 items
+javac options:
+0 items
+compiler version:
+1 items
+0 -> 2.10.5
+compile order:
+1 items
+0 -> Mixed
+name hashing:
+1 items
+0 -> true
+products:
+6 items
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> /Users/kaidi.xu/workspace/hack/test-compose/target/scala-2.10/classes/com/example/spark/DirectKafkaWordCount$$anonfun$1.class
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> /Users/kaidi.xu/workspace/hack/test-compose/target/scala-2.10/classes/com/example/spark/DirectKafkaWordCount$$anonfun$2$$anonfun$3.class
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> /Users/kaidi.xu/workspace/hack/test-compose/target/scala-2.10/classes/com/example/spark/DirectKafkaWordCount$$anonfun$2.class
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> /Users/kaidi.xu/workspace/hack/test-compose/target/scala-2.10/classes/com/example/spark/DirectKafkaWordCount$$anonfun$main$1.class
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> /Users/kaidi.xu/workspace/hack/test-compose/target/scala-2.10/classes/com/example/spark/DirectKafkaWordCount$.class
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> /Users/kaidi.xu/workspace/hack/test-compose/target/scala-2.10/classes/com/example/spark/DirectKafkaWordCount.class
+binary dependencies:
+7 items
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> /Library/Java/JavaVirtualMachines/jdk1.8.0_72.jdk/Contents/Home/jre/lib/rt.jar
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> /Users/kaidi.xu/.ivy2/cache/org.apache.kafka/kafka_2.10/jars/kafka_2.10-0.8.2.1.jar
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> /Users/kaidi.xu/.ivy2/cache/org.apache.spark/spark-core_2.10/jars/spark-core_2.10-1.6.1.jar
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> /Users/kaidi.xu/.ivy2/cache/org.apache.spark/spark-mllib_2.10/jars/spark-mllib_2.10-1.6.1.jar
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> /Users/kaidi.xu/.ivy2/cache/org.apache.spark/spark-streaming-kafka_2.10/jars/spark-streaming-kafka_2.10-1.6.1.jar
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> /Users/kaidi.xu/.ivy2/cache/org.apache.spark/spark-streaming_2.10/jars/spark-streaming_2.10-1.6.1.jar
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> /Users/kaidi.xu/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.10.5.jar
+direct source dependencies:
+0 items
+direct external dependencies:
+0 items
+public inherited source dependencies:
+0 items
+public inherited external dependencies:
+0 items
+member reference internal dependencies:
+0 items
+member reference external dependencies:
+0 items
+inheritance internal dependencies:
+0 items
+inheritance external dependencies:
+0 items
+class names:
+6 items
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> com.example.spark.DirectKafkaWordCount
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> com.example.spark.DirectKafkaWordCount$
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> com.example.spark.DirectKafkaWordCount$$anonfun$1
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> com.example.spark.DirectKafkaWordCount$$anonfun$2
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> com.example.spark.DirectKafkaWordCount$$anonfun$2$$anonfun$3
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> com.example.spark.DirectKafkaWordCount$$anonfun$main$1
+used names:
+102 items
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> !=
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> &&
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> +
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> ->
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> <
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> <init>
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> ==
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> >
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> AnyRef
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> Array
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> ClassTag
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> DecisionTree
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> DecisionTreeModel
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> DirectKafkaWordCount
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> Double
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> HasOffsetRanges
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> KafkaUtils
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> LabeledPoint
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> MLUtils
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> Map
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> OffsetRange
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> Predef
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> ScalaRunTime
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> Seconds
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> SparkConf
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> StreamingContext
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> String
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> StringContext
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> StringDecoder
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> System
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> TaskContext
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> Unit
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> Vectors
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> _1
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> _2
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> any2ArrowAssoc
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> apache
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> apply
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> args
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> arrayClass
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> augmentString
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> awaitTermination
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> brokers
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> canBuildFrom
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> com
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> createDirectStream
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> dense
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> err
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> example
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> exit
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> features
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> get
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> isEmpty
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> java
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> kafka
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> kafkaParams
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> labelAndPreds
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> lang
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> length
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> lengthCompare
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> linalg
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> line
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> lines
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> load
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> map
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> materializeClassTag
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> messages
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> mllib
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> model
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> org
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> package
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> parts
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> point
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> predict
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> prediction
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> print
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> println
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> refArrayOps
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> regression
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> s
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> scala
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> serializer
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> setAppName
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> slice
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> spark
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> sparkConf
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> sparkContext
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> split
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> ssc
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> start
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> streaming
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> stripMargin
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> toDouble
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> toSet
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> topics
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> topicsSet
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> tree
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> unapplySeq
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> unary_!
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> unchecked
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> util
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> x
+product stamps:
+6 items
+/Users/kaidi.xu/workspace/hack/test-compose/target/scala-2.10/classes/com/example/spark/DirectKafkaWordCount$$anonfun$1.class -> lastModified(1464968814000)
+/Users/kaidi.xu/workspace/hack/test-compose/target/scala-2.10/classes/com/example/spark/DirectKafkaWordCount$$anonfun$2$$anonfun$3.class -> lastModified(1464968814000)
+/Users/kaidi.xu/workspace/hack/test-compose/target/scala-2.10/classes/com/example/spark/DirectKafkaWordCount$$anonfun$2.class -> lastModified(1464968814000)
+/Users/kaidi.xu/workspace/hack/test-compose/target/scala-2.10/classes/com/example/spark/DirectKafkaWordCount$$anonfun$main$1.class -> lastModified(1464968814000)
+/Users/kaidi.xu/workspace/hack/test-compose/target/scala-2.10/classes/com/example/spark/DirectKafkaWordCount$.class -> lastModified(1464968814000)
+/Users/kaidi.xu/workspace/hack/test-compose/target/scala-2.10/classes/com/example/spark/DirectKafkaWordCount.class -> lastModified(1464968814000)
+source stamps:
+1 items
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> hash(f950142e6af177c5ea6ca318482db3549e919eee)
+binary stamps:
+7 items
+/Library/Java/JavaVirtualMachines/jdk1.8.0_72.jdk/Contents/Home/jre/lib/rt.jar -> lastModified(1450828997000)
+/Users/kaidi.xu/.ivy2/cache/org.apache.kafka/kafka_2.10/jars/kafka_2.10-0.8.2.1.jar -> lastModified(1424989934000)
+/Users/kaidi.xu/.ivy2/cache/org.apache.spark/spark-core_2.10/jars/spark-core_2.10-1.6.1.jar -> lastModified(1456554749000)
+/Users/kaidi.xu/.ivy2/cache/org.apache.spark/spark-mllib_2.10/jars/spark-mllib_2.10-1.6.1.jar -> lastModified(1456554780000)
+/Users/kaidi.xu/.ivy2/cache/org.apache.spark/spark-streaming-kafka_2.10/jars/spark-streaming-kafka_2.10-1.6.1.jar -> lastModified(1456554819000)
+/Users/kaidi.xu/.ivy2/cache/org.apache.spark/spark-streaming_2.10/jars/spark-streaming_2.10-1.6.1.jar -> lastModified(1456555217000)
+/Users/kaidi.xu/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.10.5.jar -> lastModified(1425002069000)
+class names:
+7 items
+/Library/Java/JavaVirtualMachines/jdk1.8.0_72.jdk/Contents/Home/jre/lib/rt.jar -> java.lang.Object
+/Users/kaidi.xu/.ivy2/cache/org.apache.kafka/kafka_2.10/jars/kafka_2.10-0.8.2.1.jar -> kafka.serializer.StringDecoder
+/Users/kaidi.xu/.ivy2/cache/org.apache.spark/spark-core_2.10/jars/spark-core_2.10-1.6.1.jar -> org.apache.spark.SparkConf$
+/Users/kaidi.xu/.ivy2/cache/org.apache.spark/spark-mllib_2.10/jars/spark-mllib_2.10-1.6.1.jar -> org.apache.spark.mllib.linalg.Vectors
+/Users/kaidi.xu/.ivy2/cache/org.apache.spark/spark-streaming-kafka_2.10/jars/spark-streaming-kafka_2.10-1.6.1.jar -> org.apache.spark.streaming.kafka.KafkaUtils
+/Users/kaidi.xu/.ivy2/cache/org.apache.spark/spark-streaming_2.10/jars/spark-streaming_2.10-1.6.1.jar -> org.apache.spark.streaming.StreamingContext$
+/Users/kaidi.xu/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.10.5.jar -> scala.reflect.package$
+internal apis:
+1 items
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHDuHJbSAHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAAFnNyACB4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaFsO9SJ2OFfPAgACSQAEaGFzaEwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cDN4T+Z0AAZub3RpZnlzcQB+AAyJT+9OdAAURGlyZWN0S2Fma2FXb3JkQ291bnRzcQB+AAylRRGvdAAEd2FpdHNxAH4ADN0U7MF0AA0kYXNJbnN0YW5jZU9mc3EAfgAMEVFTmHQABmVxdWFsc3NxAH4ADKfZzUh0AApwYXJzZUlucHV0c3EAfgAMJGiBL3QADGFzSW5zdGFuY2VPZnNxAH4ADCmGqp90AAxzeW5jaHJvbml6ZWRzcQB+AAwxS2EIdAANJGlzSW5zdGFuY2VPZnNxAH4ADOnNJFR0AARtYWluc3EAfgAMiESzG3QACW5vdGlmeUFsbHNxAH4ADM5C5JB0AAxpc0luc3RhbmNlT2ZzcQB+AAwxefh4dAACPT1zcQB+AAyxrIyddAAFY2xvbmVzcQB+AAxiAqavdAAIdG9TdHJpbmdzcQB+AAyUUkIsdAACIT1zcQB+AAzEEVmYdAAIZ2V0Q2xhc3NzcQB+AAzknev9dAACbmVzcQB+AAxjczw3dAACZXFzcQB+AAyDDp2RdAACIyNzcQB+AAx2GfdNdAAIZmluYWxpemVzcQB+AAzjT8PzdAAIaGFzaENvZGVzcgATeHNidGkuYXBpLlNvdXJjZUFQSblep/kpIzikAgACWwALZGVmaW5pdGlvbnN0ABdbTHhzYnRpL2FwaS9EZWZpbml0aW9uO1sACHBhY2thZ2VzdAAUW0x4c2J0aS9hcGkvUGFja2FnZTt4cHVyABdbTHhzYnRpLmFwaS5EZWZpbml0aW9uO4jJXOe0414OAgAAeHAAAAABc3IAE3hzYnRpLmFwaS5DbGFzc0xpa2WDNByh37CXbAIABEwADmRlZmluaXRpb25UeXBldAAaTHhzYnRpL2FwaS9EZWZpbml0aW9uVHlwZTtbABBzYXZlZEFubm90YXRpb25zdAATW0xqYXZhL2xhbmcvU3RyaW5nO0wACHNlbGZUeXBldAAQTHhzYnRpL2FwaS9MYXp5O0wACXN0cnVjdHVyZXEAfgBDeHIAIXhzYnRpLmFwaS5QYXJhbWV0ZXJpemVkRGVmaW5pdGlvbvkRbrHVUDziAgABWwAOdHlwZVBhcmFtZXRlcnN0ABpbTHhzYnRpL2FwaS9UeXBlUGFyYW1ldGVyO3hyABR4c2J0aS5hcGkuRGVmaW5pdGlvbocqG+hxQuNGAgAETAAGYWNjZXNzdAASTHhzYnRpL2FwaS9BY2Nlc3M7WwALYW5ub3RhdGlvbnN0ABdbTHhzYnRpL2FwaS9Bbm5vdGF0aW9uO0wACW1vZGlmaWVyc3QAFUx4c2J0aS9hcGkvTW9kaWZpZXJzO0wABG5hbWVxAH4ADXhwc3IAEHhzYnRpLmFwaS5QdWJsaWO6WD2ubC1gQgIAAHhyABB4c2J0aS5hcGkuQWNjZXNz3WKa+B1jMUgCAAB4cHVyABdbTHhzYnRpLmFwaS5Bbm5vdGF0aW9uO+uX6xkQ9o1IAgAAeHAAAAAAc3IAE3hzYnRpLmFwaS5Nb2RpZmllcnOX52HcEyZ7swIAAUIABWZsYWdzeHAAdAAmY29tLmV4YW1wbGUuc3BhcmsuRGlyZWN0S2Fma2FXb3JkQ291bnR1cgAaW0x4c2J0aS5hcGkuVHlwZVBhcmFtZXRlcjvZbSYPKJ3ytgIAAHhwAAAAAH5yABh4c2J0aS5hcGkuRGVmaW5pdGlvblR5cGUAAAAAAAAAABIAAHhyAA5qYXZhLmxhbmcuRW51bQAAAAAAAAAAEgAAeHB0AAZNb2R1bGV1cgATW0xqYXZhLmxhbmcuU3RyaW5nO63SVufpHXtHAgAAeHAAAAAAc3IAIXhzYnRpLmFwaS5BYnN0cmFjdExhenkkU3RyaWN0TGF6eQ1mHGspFiq4AgABTAAFdmFsdWV0ABJMamF2YS9sYW5nL09iamVjdDt4cHNyABN4c2J0aS5hcGkuRW1wdHlUeXBlvP2eRkk7iSQCAAB4cgAUeHNidGkuYXBpLlNpbXBsZVR5cGVyeGKIISO/QAIAAHhyAA54c2J0aS5hcGkuVHlwZT9q2SEWSarKAgAAeHBzcQB+AFtzcgATeHNidGkuYXBpLlN0cnVjdHVyZamq+YCTb9gAAgADTAAIZGVjbGFyZWRxAH4AQ0wACWluaGVyaXRlZHEAfgBDTAAHcGFyZW50c3EAfgBDeHEAfgBgc3EAfgBbdXEAfgA+AAAAAXNyAA14c2J0aS5hcGkuRGVmUr6f4ny0NmkCAAJMAApyZXR1cm5UeXBldAAQTHhzYnRpL2FwaS9UeXBlO1sAD3ZhbHVlUGFyYW1ldGVyc3QAGltMeHNidGkvYXBpL1BhcmFtZXRlckxpc3Q7eHEAfgBEcQB+AE11cQB+AE4AAAAAc3EAfgBQAHEAfgAhdXEAfgBTAAAAAHNyABR4c2J0aS5hcGkuUHJvamVjdGlvbvPSjVTpRaQtAgACTAACaWRxAH4ADUwABnByZWZpeHQAFkx4c2J0aS9hcGkvU2ltcGxlVHlwZTt4cQB+AF90AARVbml0c3IAE3hzYnRpLmFwaS5TaW5nbGV0b278p1/4z1bkRgIAAUwABHBhdGh0ABBMeHNidGkvYXBpL1BhdGg7eHEAfgBfc3IADnhzYnRpLmFwaS5QYXRomz1cCM6lJ4QCAAFbAApjb21wb25lbnRzdAAaW0x4c2J0aS9hcGkvUGF0aENvbXBvbmVudDt4cHVyABpbTHhzYnRpLmFwaS5QYXRoQ29tcG9uZW50O0PaCXQtZxZ0AgAAeHAAAAACc3IADHhzYnRpLmFwaS5JZJgybIs3U8RAAgABTAACaWRxAH4ADXhyABd4c2J0aS5hcGkuUGF0aENvbXBvbmVudF+aIlsuhp+8AgAAeHB0AAVzY2FsYXNyAA54c2J0aS5hcGkuVGhpc9sJ7abMWkBcAgAAeHEAfgB7dXIAGltMeHNidGkuYXBpLlBhcmFtZXRlckxpc3Q79dM6HfKzcO4CAAB4cAAAAAFzcgAXeHNidGkuYXBpLlBhcmFtZXRlckxpc3TWxbwcZEl04wIAAloACmlzSW1wbGljaXRbAApwYXJhbWV0ZXJzdAAcW0x4c2J0aS9hcGkvTWV0aG9kUGFyYW1ldGVyO3hwAHVyABxbTHhzYnRpLmFwaS5NZXRob2RQYXJhbWV0ZXI7z7jFXaXdtW0CAAB4cAAAAAFzcgAZeHNidGkuYXBpLk1ldGhvZFBhcmFtZXRlch9FrhfTSbDqAgAEWgAKaGFzRGVmYXVsdEwACG1vZGlmaWVydAAdTHhzYnRpL2FwaS9QYXJhbWV0ZXJNb2RpZmllcjtMAARuYW1lcQB+AA1MAAN0cGVxAH4AaHhwAH5yABt4c2J0aS5hcGkuUGFyYW1ldGVyTW9kaWZpZXIAAAAAAAAAABIAAHhxAH4AVnQABVBsYWludAAEYXJnc3NyABd4c2J0aS5hcGkuUGFyYW1ldGVyaXplZBZs7mkDybt/AgACTAAIYmFzZVR5cGVxAH4Ab1sADXR5cGVBcmd1bWVudHN0ABFbTHhzYnRpL2FwaS9UeXBlO3hxAH4AX3NxAH4AbnQABUFycmF5cQB+AHR1cgARW0x4c2J0aS5hcGkuVHlwZTt0/6Vae/npQQIAAHhwAAAAAXNxAH4AbnQABlN0cmluZ3NxAH4AcnNxAH4AdXVxAH4AeAAAAANzcQB+AHp0AARqYXZhc3EAfgB6dAAEbGFuZ3EAfgB/c3EAfgBbdXEAfgA+AAAAAHNxAH4AW3VxAH4AkwAAAAJzcQB+AG50AAZPYmplY3RxAH4Al3NxAH4AbnQAA0FueXEAfgB0dXIAFFtMeHNidGkuYXBpLlBhY2thZ2U7WxMZN3CnJ6ECAAB4cAAAAANzcgAReHNidGkuYXBpLlBhY2thZ2V+WY/2rs45WAIAAUwABG5hbWVxAH4ADXhwdAARY29tLmV4YW1wbGUuc3BhcmtzcQB+AKh0AAtjb20uZXhhbXBsZXNxAH4AqHQAA2NvbXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABVRbyEU11cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5cQB+AA1MAA9zb3VyY2VEaXJlY3RvcnlxAH4ADXhwdABFL1VzZXJzL2thaWRpLnh1L3dvcmtzcGFjZS9oYWNrL3Rlc3QtY29tcG9zZS90YXJnZXQvc2NhbGEtMi4xMC9jbGFzc2VzdAABL3VyAAJbQqzzF/gGCFTgAgAAeHAAAAAU+VAULmrxd8XqbKMYSC2zVJ6Rnu4=
+external apis:
+0 items
+source infos:
+1 items
+/Users/kaidi.xu/workspace/hack/test-compose/src/main/scala/com/example/spark/DirectKafkaWordCount.scala -> 
+AAAAAAAAAAA=
+compilations:
+7 items
+0 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABVOyk+Wd1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQARS9Vc2Vycy9rYWlkaS54dS93b3Jrc3BhY2UvaGFjay90ZXN0LWNvbXBvc2UvdGFyZ2V0L3NjYWxhLTIuMTAvY2xhc3Nlc3QAAS8=
+1 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABVRY2iQx1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQARS9Vc2Vycy9rYWlkaS54dS93b3Jrc3BhY2UvaGFjay90ZXN0LWNvbXBvc2UvdGFyZ2V0L3NjYWxhLTIuMTAvY2xhc3Nlc3QAAS8=
+2 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABVRZE/ix1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQARS9Vc2Vycy9rYWlkaS54dS93b3Jrc3BhY2UvaGFjay90ZXN0LWNvbXBvc2UvdGFyZ2V0L3NjYWxhLTIuMTAvY2xhc3Nlc3QAAS8=
+3 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABVRZG1rB1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQARS9Vc2Vycy9rYWlkaS54dS93b3Jrc3BhY2UvaGFjay90ZXN0LWNvbXBvc2UvdGFyZ2V0L3NjYWxhLTIuMTAvY2xhc3Nlc3QAAS8=
+4 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABVRbfAFR1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQARS9Vc2Vycy9rYWlkaS54dS93b3Jrc3BhY2UvaGFjay90ZXN0LWNvbXBvc2UvdGFyZ2V0L3NjYWxhLTIuMTAvY2xhc3Nlc3QAAS8=
+5 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABVRbtbZ11cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQARS9Vc2Vycy9rYWlkaS54dS93b3Jrc3BhY2UvaGFjay90ZXN0LWNvbXBvc2UvdGFyZ2V0L3NjYWxhLTIuMTAvY2xhc3Nlc3QAAS8=
+6 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABVRbyEU11cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQARS9Vc2Vycy9rYWlkaS54dS93b3Jrc3BhY2UvaGFjay90ZXN0LWNvbXBvc2UvdGFyZ2V0L3NjYWxhLTIuMTAvY2xhc3Nlc3QAAS8=

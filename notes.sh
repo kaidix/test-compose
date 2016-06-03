@@ -27,3 +27,7 @@ docker exec -it mhs-demo1/testcompose_mesos_slave_1 /usr/local/spark/bin/run-exa
        org.apache.spark.examples.streaming.DirectKafkaWordCount zk:2181 \
        my-consumer-group test 1
 
+docker exec -it mhs-demo1/testcompose_mesos_slave_1 python /pysparkFile/train.py /pysparkFile/train.csv
+
+docker exec -it mhs-demo1/testcompose_mesos_slave_1 /usr/local/spark/bin/spark-submit --master mesos://mesos_master:5050 --class com.example.spark.DirectKafkaWordCount app/direct_kafka_word_count.jar kafka:9092 test
+

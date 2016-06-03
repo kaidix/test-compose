@@ -26,9 +26,9 @@ print
 print "Categories of Diagnosis of heart disease (angiographic disease status) that we are predicting"
 print "-- Value 0: < 50% diameter narrowing"
 print "-- Value 1: > 50% diameter narrowing "
-print heartdf.ix[:,13].unique() #Column containing the Diagnosis of heart disease
+print heartdf.ix[:,1].unique() #Column containing the Diagnosis of heart disease
 
-newheartdf = pd.concat([heartdf.ix[:,13], heartdf.ix[:,0:12]],axis=1, join_axes=[heartdf.index])
+newheartdf = pd.concat([heartdf.ix[:,1], heartdf.ix[:,0:0]],axis=1, join_axes=[heartdf.index])
 newheartdf.replace('?', np.nan, inplace=True) # Replace ? values
 
 print
@@ -37,7 +37,7 @@ ndf2 = newheartdf.dropna()
 ndf2.to_csv(path+"heart-disease-cleaveland.txt",sep=",",index=False,header=None,na_rep=np.nan)
 print ndf2.shape
 print
-ndf2.ix[:5,:]
+ndf2.ix[:0,:]
 
 points = sc.textFile(path+'heart-disease-cleaveland.txt') 
 
