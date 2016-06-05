@@ -1,15 +1,6 @@
-# A fun hack project....
+# Stock prediction hack project
 
 ## Setup:
-
-### Description:
-
-This project is using Docker swarm and docker-compose to spin up a virtual cluster to simulate a production like environment locally.
-This docker-compose configuration will spin up 1 zookeeper, 1 kafka, 1 mesos master, 1 mesos slave (scaleable by use command `docker-compose scale mesos_slave=<number>`)
-
-what is [apache mesos](http://mesos.apache.org/)
-
-If you are interesting to read: Setting up [Docker swarm with overlay network](https://docs.docker.com/engine/userguide/networking/get-started-overlay/)
 
 ### Prerequest:
 
@@ -21,7 +12,6 @@ Make sure you can use docker and docker-compose
 
 #### Setting up Docker swarm environment:
 
-what is [Docker swarm](https://docs.docker.com/swarm/)
 
 1. Setting up a keystore for docker swarm, we use consul here:
 
@@ -43,14 +33,8 @@ docker-machine create -d virtualbox --virtualbox-memory 4096 --virtualbox-cpu-co
 eval $(docker-machine env --swarm mhs-demo1)
 ```
 
-4. Check how many vms you have:
-```
-docker-machine ls
-```
-
 #### Starting docker instance with docker-compose:
 
-what is [docker-compose](https://docs.docker.com/compose/)
 
 in the directory contains docker-compose.yml (which is the root dir of this project)
 
@@ -58,53 +42,8 @@ in the directory contains docker-compose.yml (which is the root dir of this proj
 docker-compose up
 ```
 
-run docker compose in background:
-```
-docker-compose up -d
-```
-docker will pull all necessary images, run services, and connect them in the swarm network
 
-sometimes the network is not stable, it is possible one or more nodes die on start (it is possible to configure HA to automatically recover from this situation, but I didn't do it) In that case, stop all service, remove them and start it again:
-
-```
-docker-compose stop
-docker-compose rm
-docker-compose up
-```
-
-if docker-compose rm does not remove them, use
-
-```
-docker ps -a
-```
-will show you all docker instances
-
-then use following command to delete
-```
-docker rm -f <name>
-```
-
-## Usage:
-
-### See which docker images is running and check the name:
-```
-docker ps
-```
-
-### Attach a new shell process inside a running Docker instance:
-```
-docker exec -it <name> /bin/bash
-```
-
-## Play with the Heartbeat app:
-
-### Preparation:
-1. build the jar:
-```
-sbt assembly
-```
-
-2. find the kafka, mesos_slave docker instance name:
+4. find the kafka, mesos_slave docker instance name:
 ```
 docker ps
 # looking for the name <node>/testcompose_mesos_slave_<number>, <node>/testcompose_kafka_master_<number>
@@ -122,7 +61,7 @@ You should see something like this:
 
 If you notice the port mapping on the mesos_master, you can also open that url to check mesos cluster's status
 
-3. create/consume kafka topic from shell:
+5. create/consume kafka topic from shell:
 ```
 docker exec -it <node>/testcompose_kafka_master_<number> /opt/kafka_2.11-0.9.0.1/bin/kafka-console-producer.sh --broker-list localhost:9092 --topic <kafka_topic>
 docker exec -it <node>/testcompose_kafka_master_<number> /opt/kafka_2.11-0.9.0.1/bin/kafka-console-consumer.sh --zookeeper zk:2181 --topic <kafka_topic> --from-beginning
@@ -132,32 +71,34 @@ docker exec -it <node>/testcompose_kafka_master_<number> /opt/kafka_2.11-0.9.0.1
 
 basically `docker exec -it <docker-instance-name> <command>`
 
-### Build decision tree model:
+Type message in the producer shell and hit enter will push line to kafka topic
+
+6. cd to the stock dir, run command
 ```
-docker exec -it <node>/testcompose_mesos_slave_<number> python /pysparkFile/train.py /pysparkFile/train.csv
-# the code and training data is already placed inside the docker image by linking a shared folder
-# it will generate/save model file under /decisiontree
+sbt assembly
 ```
 
-### Streaming the input, process it and push to herokuConnect
-```
-docker exec -it <node>/testcompose_mesos_slave_<number> /usr/local/spark/bin/spark-submit --master mesos://mesos_master:5050 --class com.example.spark.DirectKafkaWordCount app/direct_kafka_word_count.jar kafka_master:9092 <kafka_topic>
+7. open a shell attach to mesos_slave:
 
-# note: mesos_master:5050 and kafka_master:9092 is the actual network address
 ```
+docker exec -it <node>/testcompose_mesos_slave_<number> /bin/bash
+```
+
+Then in the shell, run following command to take input from kafka:
+```
+cd /pysparkFile/stock
+/usr/local/spark/bin/spark-submit --master mesos://mesos_master:5050 --class SimpleApp target/scala-2.10/simple-project_2.10-1.0.jar kafkaEvaluate kafka_master:9092 <kafka_topic>
+
+# note: for some reason, local mode doesn't work if we pointing spark to kafka
+```
+
+or run locally by reading input.csv 
+
+```
+/usr/local/spark/bin/spark-submit --master local --class SimpleApp target/scala-2.10/simple-project_2.10-1.0.jar evaluate
+```
+
 
 ### change the heroku endpoint:
-open the `DirectKafkaWordCount.scala` file, change the url inside the Http(....), rebuild the scala program
-
-## Related docker images:
-
-[zookeeper](https://hub.docker.com/r/netflixoss/exhibitor/)
-
-[mesos master](https://hub.docker.com/r/mesosphere/mesos-master/)
-
-build a [mesos_slave](https://github.com/kaidix/mesos_slave) image which includes all necessary spark libraries
-
-[kafka](https://hub.docker.com/r/wurstmeister/kafka/)
-
-
+open the `stock/SimpleApp.scala` file, change the url inside the Http(....), rebuild the scala program
 
