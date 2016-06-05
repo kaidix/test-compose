@@ -130,6 +130,12 @@ docker exec -it <node>/testcompose_kafka_master_<number> /opt/kafka_2.11-0.9.0.1
 # note: zk:2181 is the zookeeper network address inside the docker swarm, swarm sets up a internal DNS with overlay network
 ```
 
+Right now the data format is assuming in: 
+
+`<device_id> <heartbeat_rate>`
+
+delimiter is space
+
 basically `docker exec -it <docker-instance-name> <command>`
 
 ### Build decision tree model:

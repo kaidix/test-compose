@@ -73,6 +73,12 @@ basically `docker exec -it <docker-instance-name> <command>`
 
 Type message in the producer shell and hit enter will push line to kafka topic
 
+Right now the data format is assuming in: 
+
+`<stock_symbol> <close> <ema>`
+
+delimiter is space
+
 6. cd to the stock dir, run command
 ```
 sbt assembly
