@@ -52,7 +52,7 @@ docker-machine ls
 
 what is [docker-compose](https://docs.docker.com/compose/)
 
-in the directory contains docker-compose.yml (which is the root dir of this project)
+in the directory contains docker-compose.yml (which is the root dir of this project, also it will pull about 2gb image files)
 
 ```
 docker-compose up
