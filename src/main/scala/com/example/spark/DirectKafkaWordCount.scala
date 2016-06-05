@@ -11,6 +11,9 @@ import org.apache.spark.mllib.tree.model.DecisionTreeModel
 import org.apache.spark.mllib.util.MLUtils
 import org.apache.spark.mllib.regression.LabeledPoint
 
+import scalaj.http.Http
+import scalaj.http.HttpOptions
+
 object DirectKafkaWordCount {
   def main(args: Array[String]): Unit = {
     if (args.length < 2) {
@@ -44,18 +47,21 @@ object DirectKafkaWordCount {
     val model = DecisionTreeModel.load(ssc.sparkContext, "/decisiontree")
     val labelAndPreds = lines.map { point =>
       val prediction = model.predict(LabeledPoint(0.0, Vectors.dense(point.slice(1,2).map(x => x.toDouble))).features)
-      (point(0), prediction)
-    }
-    labelAndPreds.map {point => 
-        if(point._2>0){
-            print("Captured abnormal heartbeat rate:" + point._2 + "Device: " + point._1)
+      if(prediction>0){
+            val result = Http("https://guarded-ridge-26373.herokuapp.com/heartbeat").postData("""{"device_id":"%s","heartbeat":"%s"}""".format(point(0), point(1)))
+                          .header("Content-Type", "application/json")
+                          .header("Charset", "UTF-8")
+                          .option(HttpOptions.readTimeout(10000)).asString
+            (point(0), point(1), prediction, result)
         }
-        else{
-            print("Normal data:")
-            print(point)
-        }
-        point
+    else{
+        val result = "a"
+      (point(0), point(1), prediction, result)
     }
+    }
+
+
+    // labelAndPreds.foreach{_.foreach{pp => handleOutput(pp._1,pp._2,pp._3)}}
     labelAndPreds.print()
     // val prediction = model.predict(words.map(lambda x: x.features))
 
@@ -68,5 +74,13 @@ object DirectKafkaWordCount {
   }
   def parseInput(line:String){
       val parts = line.split(' ')
+  }
+  def handleOutput(device_id:String, heartbeat:String, predict:Double){
+    if(predict>0){
+        val result = Http("https://guarded-ridge-26373.herokuapp.com/heartbeat").postData("""{"device_id":%s,"heartbeat":%s}""".format(device_id, heartbeat))
+                      .header("Content-Type", "application/json")
+                      .header("Charset", "UTF-8")
+                      .option(HttpOptions.readTimeout(10000)).asString
+    }
   }
 }

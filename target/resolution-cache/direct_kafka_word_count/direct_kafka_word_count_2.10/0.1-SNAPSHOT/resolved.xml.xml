@@ -4,7 +4,7 @@
 		module="direct_kafka_word_count_2.10"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20160526034459"
+		publication="20160604172221"
 	>
 		<description>
 		direct_kafka_word_count
@@ -40,5 +40,6 @@
 		<dependency org="org.apache.spark" name="spark-streaming-kafka_2.10" rev="1.6.1" conf="compile->default(compile)">
 			<exclude org="org.spark-project.spark" module="unused" name="*" type="*" ext="*" conf="" matcher="exact"/>
 		</dependency>
+		<dependency org="org.scalaj" name="scalaj-http_2.10" rev="2.3.0" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

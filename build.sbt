@@ -10,5 +10,6 @@ libraryDependencies ++= Seq(
   "org.apache.spark" %% "spark-mllib" % sparkVersion % "provided",
   ("org.apache.spark" %% "spark-streaming-kafka" % sparkVersion) exclude ("org.spark-project.spark", "unused")
 )
+libraryDependencies +=  "org.scalaj" %% "scalaj-http" % "2.3.0"
 
 assemblyJarName in assembly := name.value + ".jar"
