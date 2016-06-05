@@ -48,7 +48,7 @@ object DirectKafkaWordCount {
     val labelAndPreds = lines.map { point =>
       val prediction = model.predict(LabeledPoint(0.0, Vectors.dense(point.slice(1,2).map(x => x.toDouble))).features)
       if(prediction>0){
-            val result = Http("https://guarded-ridge-26373.herokuapp.com/heartbeat").postData("""{"device_id":"%s","heartbeat":"%s"}""".format(point(0), point(1)))
+            val result = Http("https://stark-everglades-26570.herokuapp.com/update").postData("""{"tickersymbol":"%s","sfid":"%s"}""".format(point(0), point(1)))
                           .header("Content-Type", "application/json")
                           .header("Charset", "UTF-8")
                           .option(HttpOptions.readTimeout(10000)).asString
