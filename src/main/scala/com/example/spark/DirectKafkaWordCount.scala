@@ -75,12 +75,4 @@ object DirectKafkaWordCount {
   def parseInput(line:String){
       val parts = line.split(' ')
   }
-  def handleOutput(device_id:String, heartbeat:String, predict:Double){
-    if(predict>0){
-        val result = Http("https://guarded-ridge-26373.herokuapp.com/heartbeat").postData("""{"device_id":%s,"heartbeat":%s}""".format(device_id, heartbeat))
-                      .header("Content-Type", "application/json")
-                      .header("Charset", "UTF-8")
-                      .option(HttpOptions.readTimeout(10000)).asString
-    }
-  }
 }
